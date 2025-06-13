@@ -1,0 +1,16 @@
+  [1m[35m (77.3ms)[0m  [1m[35mCREATE DATABASE "template_kanuf_development" ENCODING = 'unicode'[0m
+  [1m[35m (44.4ms)[0m  [1m[35mCREATE DATABASE "template_kanuf_test" ENCODING = 'unicode'[0m
+Started GET "/cleanings" for 127.0.0.1 at 2025-06-13 13:49:55 -0400
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/cleanings"):
+  
+Started GET "/" for 127.0.0.1 at 2025-06-13 13:49:57 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/lukaswolff/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lukaswolff/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 270)
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 2554)
+
+
