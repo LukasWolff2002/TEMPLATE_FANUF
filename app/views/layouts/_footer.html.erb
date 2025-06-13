@@ -1,0 +1,58 @@
+<style>
+  footer.custom-footer {
+    background-color: #212529; /* color bg-dark de Bootstrap */
+    color: white;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); /* sombra como shadow-sm */
+    min-height: 60px;
+    max-height: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 60px; /* baja el footer 20px */
+  }
+
+  footer.custom-footer .container {
+    display: flex;
+    align-items: center;
+  }
+
+  footer.custom-footer img {
+    max-height: 100px; /* ajusta a la altura del footer */
+    height: auto;
+    width: auto;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    footer.custom-footer {
+      min-height: 50px;
+      max-height: 50px;
+    }
+    footer.custom-footer img {
+      max-height: 80px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    footer.custom-footer {
+      min-height: 50px;
+      max-height: 50px;
+    }
+    footer.custom-footer img {
+      max-height: 70px;
+      margin-left: 10px; /* mueve un poco a la derecha en móvil */
+    }
+  }
+</style>
+
+<div class="container mb-3"></div> <!-- Espacio entre la vista y el footer -->
+
+<footer class="custom-footer mt-auto">
+  <div class="container">
+    <!-- Logo abajo izquierda con enlace -->
+    <%= link_to "https://lukaswolff2002.github.io/Kanuf_Web/", target: "_blank", rel: "noopener" do %>
+      <%= image_tag "LogoKANUF-08.png", alt: "Logo KANUF", class: "img-fluid" %>
+    <% end %>
+  </div>
+</footer>

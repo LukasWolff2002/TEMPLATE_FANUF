@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <%= link_to "Template", root_path, class: "navbar-brand fw-bold text-white" %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <% if logged_in? %>
+        <!-- Menú izquierdo -->
+        <ul class="navbar-nav me-auto">
+
+
+
+          
+        </ul>
+        
+
+        <!-- Menú derecho: Usuario y Cerrar Sesión -->
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white fw-bold" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle"></i> <%= current_user.nombre %> <%= current_user.apellido %>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow-sm">
+              <li><div class="dropdown-item"><i class="bi bi-briefcase"></i> <%= current_user.cargo %></div></li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <%= button_to logout_path, method: :delete, class: "dropdown-item text-danger fw-bold",
+                      form: { data: { turbo: "false", turbo_confirm: "¿Estás seguro que deseas cerrar sesión?" } } do %>
+                  <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+                <% end %>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</nav>
